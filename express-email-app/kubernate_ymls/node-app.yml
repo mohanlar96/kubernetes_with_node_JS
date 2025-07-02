@@ -14,18 +14,13 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: philippaul/node-mongo-db:04
+        image: mohanlar96/express-email-app-backend # this is coming from my docker 
         env:
-          - name: MONGO_HOST
+          - name: MONGO_URL
             valueFrom:
               configMapKeyRef:
                 name: mongo-config
-                key: MONGO_HOST
-          - name: MONGO_PORT
-            valueFrom:
-              configMapKeyRef:
-                name: mongo-config
-                key: MONGO_PORT
+                key: MONGO_URL
 
 
 ---
