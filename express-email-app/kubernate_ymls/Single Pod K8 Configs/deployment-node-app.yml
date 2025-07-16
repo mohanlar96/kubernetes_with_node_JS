@@ -5,7 +5,7 @@ metadata:
   name: my-nodedb-app
 spec:
   # 3 Pods should exist at all times.
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: nodedb-app
@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: nodedb-app
-        image: philippaul/node-mongo-db:02
+        image: mohanlar96/express-email-app-backend:latest # need to push to docker registry 
       - name: mongodb
         image: mongo:latest
